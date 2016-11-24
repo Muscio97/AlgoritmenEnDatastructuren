@@ -1,0 +1,26 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\MuscioCraft\Documents\AlgoritmenEnDatastructuren\.metadata\.plugins\org.eclipse.core.resources\.projects\Python_Practica\com.python.pydev.analysis\v2_indexcache
+Week_1_1|1479733412785349000|C:\Users\MuscioCraft\Documents\AlgoritmenEnDatastructuren\Python_Practica\Week_1_1.py
+Week_1_2|1479799708027143000|C:\Users\MuscioCraft\Documents\AlgoritmenEnDatastructuren\Python_Practica\Week_1_2.py
+Week_1_3|1479804253715135000|C:\Users\MuscioCraft\Documents\AlgoritmenEnDatastructuren\Python_Practica\Week_1_3.py
+Week_1_4|1479799285721145000|C:\Users\MuscioCraft\Documents\AlgoritmenEnDatastructuren\Python_Practica\Week_1_4.py
+-- END DISKCACHE
+-- START DICTIONARY
+4
+1=Week_1_1
+3=Week_1_2
+2=Week_1_3
+4=Week_1_4
+-- END DICTIONARY
+-- START TREE 1
+5
+a|3|a!11@a!19@a!27@
+get|1|getNumbers!26@
+how|1|how_many!34@
+mym|1|mymax!10@
+pri|1|priem!18@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

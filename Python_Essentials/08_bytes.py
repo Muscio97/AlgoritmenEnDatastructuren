@@ -1,0 +1,15 @@
+b = b'abc'                             ; print(b)
+b = 'abc'.encode()                     ; print(b)
+b = 'abc'.encode('utf-16')             ; print(b)
+b = bytes(10)                          ; print(b)
+b = bytes([10])                        ; print(b)
+b = bytes([97,98,99])                  ; print(b)
+b = bytes(range(ord('a'),ord('a')+26)) ; print(b)
+print()
+
+b = b'abc'
+ba = bytearray(b)          ; print(ba)
+ba = bytearray(10)         ; print(ba)
+ba = bytearray([97,98,99]) ; print(ba)
+print(ba.decode())
+print()
