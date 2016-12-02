@@ -1,0 +1,7 @@
+'''
+Created on 28 nov. 2016
+
+@author: MuscioCraft
+'''
+from Week_2_2.Mystack import push,peek,pop
+

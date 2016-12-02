@@ -1,26 +1,62 @@
 -- VERSION_4
 -- START DISKCACHE_2
 C:\Users\MuscioCraft\Documents\AlgoritmenEnDatastructuren\.metadata\.plugins\org.eclipse.core.resources\.projects\Python_Practica\com.python.pydev.analysis\v2_indexcache
+Week_2_4|1480583068997477000|C:\Users\MuscioCraft\Documents\AlgoritmenEnDatastructuren\Python_Practica\Week_2_4.py
+LOOPS|1479979232942999000|C:\Users\MuscioCraft\Documents\AlgoritmenEnDatastructuren\Python_Practica\LOOPS.py
 Week_1_1|1479733412785349000|C:\Users\MuscioCraft\Documents\AlgoritmenEnDatastructuren\Python_Practica\Week_1_1.py
 Week_1_2|1479799708027143000|C:\Users\MuscioCraft\Documents\AlgoritmenEnDatastructuren\Python_Practica\Week_1_2.py
+Week_2_1|1480409226488918000|C:\Users\MuscioCraft\Documents\AlgoritmenEnDatastructuren\Python_Practica\Week_2_1.py
 Week_1_3|1479804253715135000|C:\Users\MuscioCraft\Documents\AlgoritmenEnDatastructuren\Python_Practica\Week_1_3.py
+Week_2_2|1480411434631064000|C:\Users\MuscioCraft\Documents\AlgoritmenEnDatastructuren\Python_Practica\Week_2_2.py
 Week_1_4|1479799285721145000|C:\Users\MuscioCraft\Documents\AlgoritmenEnDatastructuren\Python_Practica\Week_1_4.py
+Week_2_3|1480411332966890000|C:\Users\MuscioCraft\Documents\AlgoritmenEnDatastructuren\Python_Practica\Week_2_3.py
 -- END DISKCACHE
 -- START DICTIONARY
-4
+12
+11=Checker
+12=Mystack.__init__
+8=Week_2_4
+10=Mystack
+2=LOOPS
 1=Week_1_1
-3=Week_1_2
-2=Week_1_3
-4=Week_1_4
+4=Week_1_2
+7=Week_2_1
+3=Week_1_3
+9=Week_2_2
+5=Week_2_3
+6=Week_1_4
 -- END DICTIONARY
 -- START TREE 1
-5
-a|3|a!11@a!19@a!27@
-get|1|getNumbers!26@
-how|1|how_many!34@
+21
+a|4|a!11@a!19@a!27@a!35@
+b|1|b!19@
+che|1|Checker!41@
+dd|0|
+get|1|getNumbers!34@
+how|1|how_many!50@
+ia|0|
+iss|0|
+mac|1|machtv3!58@
+myb|1|mybin!66@
 mym|1|mymax!10@
-pri|1|priem!18@
+mys|1|Mystack!73@
+pri|1|priem!26@
+qso|0|
+sta|1|stack!43@
+swa|0|
+t1|0|
+t2|0|
+tbn|1|TBN!75@
+tem|0|
+tim|0|
 -- END TREE
 -- START TREE 2
-0
+7
+__i|1|__init__!10&74@
+equ|1|equal_check!11&42@
+ise|1|isEmpty!10&74@
+pee|1|peek!10&74@
+pop|1|pop!10&74@
+pus|1|push!10&74@
+sta|1|stack!12&75@
 -- END TREE

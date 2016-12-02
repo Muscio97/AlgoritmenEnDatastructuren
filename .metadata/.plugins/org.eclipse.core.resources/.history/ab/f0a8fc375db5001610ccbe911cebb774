@@ -1,0 +1,36 @@
+'''
+Created on 28 nov. 2016
+
+@author: MuscioCraft
+'''
+from Week_2_2 import Mystack
+
+class Checker():
+
+    def equal_check(temp):
+        falid = 1
+        for element in temp:
+            print(element)
+            if(element =='(' or element =='{' or element =='['):
+                Mystack.push(element)
+            if(element ==')' or element =='}' or element ==']'):
+                print(1)
+                if(element ==')'):
+                    print(2)
+                    if(Mystack.peek()=='('):
+                        print(3)
+                        Mystack.pop()
+                    else:
+                        return falid
+                if(element ==']'):
+                    if(Mystack.peek()=='['):
+                        Mystack.pop()
+                    else:
+                        return falid          
+                if(element =='}'):
+                    if(Mystack.peek()=='{'):
+                        Mystack.pop()
+                    else:
+                        return falid
+
+print(Checker.equal_check(input("String: ")))

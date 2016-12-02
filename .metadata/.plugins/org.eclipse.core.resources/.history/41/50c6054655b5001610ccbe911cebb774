@@ -1,0 +1,18 @@
+'''
+Created on 28 nov. 2016
+
+@author: MuscioCraft
+'''
+from inspect import stack
+
+class Mystack():
+    global stack
+    stack = []
+    
+    def push(self, item):
+        stack.extend([item])
+        print(stack)
+        
+        
+Mystack.push(Mystack, 6)
+Mystack.push(Mystack, 6)

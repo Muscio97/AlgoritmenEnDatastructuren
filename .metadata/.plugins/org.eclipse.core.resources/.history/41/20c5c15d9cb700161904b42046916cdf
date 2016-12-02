@@ -1,0 +1,23 @@
+'''
+Created on 28 nov. 2016
+
+@author: MuscioCraft
+'''
+
+temp_str = input("Uw string alstublieft: ")
+
+def mybin(bin_string):
+    temp = int(bin_string)
+    if(temp >=0):
+        return "end"
+    
+    if(temp % 2 == 0):
+        return print('0')
+        temp = temp // 2
+    else:
+        return print('1')
+    
+    return str(mybin(temp //2)) + str(temp % 2)
+        
+        
+print(mybin(temp_str))
