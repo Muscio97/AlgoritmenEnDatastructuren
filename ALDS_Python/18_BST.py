@@ -70,15 +70,15 @@ class BSTNode:
         else:
             return None
 
-    def search2(self,e):
-        if self.element == e:
-            return self
-        parent = self.getParent(e)
-        if parent == None:
+    def searchr(self,e,current):
+        if current == None:
             return None
-        if parent.element < e:
-            return parent.right
-        return parent.left
+        
+        if current.element < e:
+            return self.searchr(e,current.right)
+        elif current.element > e:
+            return self.searchr(e,current.left)
+        return current
 
     def getParent(self,e):
         parent = self
@@ -145,7 +145,12 @@ class BSTNode:
         current.element = node.left.element
         node.left = node.left.right
         return True
-
+    
+    def max(self, current):
+        if current.right:
+            return self.max(current.right)
+        return current
+        
 class BST:
     def __init__(self,a=None):
         if a:
@@ -167,6 +172,12 @@ class BST:
             return self.root.search(e)
         else:
             return None
+    
+    def searchr(self,e):
+        if self.root and e:
+            return self.root.searchr(e,self.root)
+        else:
+            return None
 
     def insert(self,e):
         if e:
@@ -179,6 +190,7 @@ class BST:
             return False
 
     def delete(self,e):
+
         if self.root and e:
             if self.root.element == e:
                 if self.root.left == None:
@@ -197,6 +209,14 @@ class BST:
                 return self.root.delete(e)
         else:
             return False
+   
+        return parent.left
+
+    def max(self):
+        if self.root:
+            return self.root.max(self.root)
+        else:
+            return None
 
 if __name__ == '__main__':
     b = BST([1,2,3])
@@ -223,46 +243,14 @@ if __name__ == '__main__':
     node = b.search(11)
     if node != None:
         print(node.element)
+    
     node = b.search(16)
     if node != None:
         print(node.element)
-    b.insert(17);
-    print(b)
-    print('----------------')
-    b.delete(14)
-    print(b)
-    print('----------------')
+        
+    node = b.searchr(11)
+    if node != None:
+        print(node.element)
 
-    print(b.insert(10))
-
-    b = BST()
-    for i in range(1,11):
-        b.insert(i)
-    print(b)
-    print('----------------')
-
-    b = BST(None)
-    print(b)
-    print('----------------')
-    b = BST([])
-    print(b)
-    print('----------------')
-    b = BST([0])
-    print(b)
-    print('----------------')
-
-    b = BST()
-    b.insert(3)
-    b.insert(2)
-    b.insert(10)
-    b.insert(11)
-    b.insert(9)
-    b.insert(6)
-    b.insert(7)
-    b.insert(8)
-    print(b)
-    print('----------------')
-    b.delete(3)
-    print(b)
-    print('----------------')
-
+    
+    print(b.max())

@@ -5,8 +5,8 @@ Created on 1 dec. 2016
 '''
 from random import randint
 from pip.commands.search import highest_version
-global tmp
-tmp = 0
+global temp_counter
+temp_counter  = 0
 
 def swap(a,i,j):
     a[i],a[j] = a[j],a[i]
@@ -14,25 +14,36 @@ def swap(a,i,j):
 
 import random
 
-def qsort(a,low=0,high=-1):
-    if high == -1:
+def qsort(a,low=None,high=None):
+    global temp_counter
+    if high == None:
+        temp_counter = temp_counter + 1
         high = len(a) -1
+    if low == None:
+        temp_counter = temp_counter + 1
+        low = 0
     if low < high:
-        tmp = low
-        low = m
-
-        swap(a,low, random.randint(low,high))
-        m = low
+        temp_counter = temp_counter + 1
+        b = a[low:high +1]
+        temp = b.index(min(b))
         
+        swap(a,low, temp+low)
+        m = low
+
         for j in range(low+1,high+1):
             if a[j] < a[low]:
+                temp_counter = temp_counter + 1
                 m += 1
                 swap(a,m,j)
         
+        
         swap(a,low,m)
         if m > 0:
+            temp_counter = temp_counter + 1
             qsort(a,low,m-1)
         qsort(a,m+1,high)
+        print(temp_counter)
+        
 
 def isSorted(a):
     i = 0;
@@ -42,7 +53,7 @@ def isSorted(a):
     return i == len(a)-1
 
 if __name__ == '__main__':
-    ia = [45,65,34,82,30,22]
+    ia = [45,65,34,82,30,22,33,33,33,33,65,34,82,30,22,33,33,33,33,65,34,82,30,22,33,33,33,33,65,34,82,30,22,33,33,33,33,65,34,82,30,22,33,33,33,33,65,34,82,30,22,33,33,33,33,65,34,82,30,22,33,33,33,33,65,34,82,30,22,33,33,33,33,65,34,82,30,22,33,33,33,33,65,34,82,30,22,33,33,33,33,65,34,82,30,22,33,33,33,33,65,34,82,30,22,33,33,33,33,65,34,82,30,22,33,33,33,33,65,34,82,30,22,33,33,33,33,65,34,82,30,22,33,33,33,33]
     print(ia)
     qsort(ia)
     print(ia)

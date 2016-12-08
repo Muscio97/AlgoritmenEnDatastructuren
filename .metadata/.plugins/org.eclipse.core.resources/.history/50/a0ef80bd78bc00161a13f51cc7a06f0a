@@ -1,0 +1,55 @@
+'''
+Created on 7 dec. 2016
+
+@author: MuscioCraft
+'''
+class ListNode:
+    def _init_(self, data, next_node):
+        self.data = data
+        self.next = next_node
+
+    def _repr_(self):
+        return str(self.data)
+
+
+class MyLinkedList:
+    def _init_(self):
+        self.head = None
+        self.tail = None
+
+    def _repr_(self):
+        s = ''
+        current = self.head
+        if current != None:
+            s = s + str(current)
+            current = current.next
+        while current != None:
+            s = s + " -> " + str(current)
+            current = current.next
+        if not s:  # s == '':
+            s = 'empty list'
+        return s
+
+    def addLast(self, e):
+        if not self.head:  # self.head == None:
+            self.head = ListNode(e, None)
+            self.tail = self.head
+        else:
+            n = ListNode(e, None)
+            self.tail.next = n
+            self.tail = self.tail.next
+
+    def delete(self, e):
+        if self.head:  # self.head != None:
+            if self.head.data == e:
+                self.head = self.head.next
+                if self.head == None:
+                    self.tail = None
+            else:
+                current = self.head
+                while current.next != None and current.next.data != e:
+                    current = current.next
+                if current.next != None:
+                    current.next = current.next.next
+                if current.next == None:
+                    self.tail = current
